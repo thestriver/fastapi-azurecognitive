@@ -17,7 +17,8 @@ text_analytics_client = TextAnalyticsClient(
 
 @app.post("/")
 async def analyze_texts(texts: List[str]):
-    sentiment_response = text_analytics_client.analyze_sentiment(texts)
+    sentiment_response = text_analytics_client.analyze_sentiment(
+        texts)  # sentiment analysis
     key_phrase_response = text_analytics_client.extract_key_phrases(texts)
     language_response = text_analytics_client.detect_language(texts)
 
