@@ -7,7 +7,7 @@ from utils import get_text_analytics_credentials
 
 app = FastAPI()
 
-load_dotenv()
+load_dotenv()  # envs
 key, endpoint = get_text_analytics_credentials()
 
 credential = AzureKeyCredential(key)
